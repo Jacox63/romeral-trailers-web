@@ -5,6 +5,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || undefined;
 
 const nextConfig: NextConfig = {
   basePath,
+  // Prefijo de recursos estáticos opcional (solo para vistas previas que no admiten "/_next").
+  assetPrefix: process.env.ASSET_PREFIX || undefined,
   // Exportación estática: genera out/ desplegable en cualquier hosting.
   output: "export",
   // El optimizador por defecto no funciona en export estático; las imágenes ya se
