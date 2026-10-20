@@ -60,7 +60,17 @@ no añadir precios, medidas, testimonios ni garantías que la marca no haya publ
 (ver `docs/business-research.md`). Para cambiar fotos: reemplaza el PNG en
 `assets-source/instagram/` con el mismo nombre y ejecuta `npm run images`.
 
-## Publicar (cuando esté autorizado)
+## Publicar
+
+### Opción A — GitHub Pages (automático, incluido)
+
+`.github/workflows/deploy-pages.yml` hace lint, typecheck, build y despliegue en cada push a
+`main`. Una sola vez: en GitHub, **Settings → Pages → Source: GitHub Actions**. El sitio queda en
+`https://<usuario>.github.io/<repo>/`. Con dominio propio, define en **Settings → Secrets and
+variables → Actions → Variables** `SITE_URL=https://tu-dominio.com` (y `BASE_PATH` vacío).
+En planes gratuitos, GitHub Pages exige que el repositorio sea público.
+
+### Opción B — cualquier hosting estático
 
 El build es estático, así que sirve cualquier hosting:
 
@@ -74,7 +84,7 @@ El build es estático, así que sirve cualquier hosting:
 5. Cambia el enlace de la bio de Instagram al nuevo dominio.
 6. Opcional: registra el sitio en Google Search Console y envía `sitemap.xml`.
 
-Nada de esto se ha ejecutado: no se ha hecho push ni despliegue.
+Hay una vista previa privada publicada en claude.ai; el despliegue público se activa al subir el repositorio a GitHub.
 
 ## Pendientes
 
