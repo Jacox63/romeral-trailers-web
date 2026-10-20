@@ -1,0 +1,313 @@
+{
+  "fecha": "2026-10-20 16:45",
+  "resultados": [
+    {
+      "prueba": "Carga inicial (HTTP 200)",
+      "resultado": "PASS",
+      "evidencia": "status 200, load 0.24s"
+    },
+    {
+      "prueba": "Proyectos: sección fijada (pin) en escritorio",
+      "resultado": "PASS",
+      "evidencia": "pin-spacer presente: True"
+    },
+    {
+      "prueba": "Animaciones: estado final visible tras scroll completo",
+      "resultado": "PASS",
+      "evidencia": {
+        "elementos": {
+          "reveal": 4,
+          "heroLines": 3,
+          "fade": 17,
+          "words": 20,
+          "mask": 4,
+          "clipx": 1,
+          "splitLines": 12
+        },
+        "no_finalizados": {}
+      }
+    },
+    {
+      "prueba": "Proyectos: pista horizontal desplazada por el scroll",
+      "resultado": "PASS",
+      "evidencia": "transform: matrix(1, 0, 0, 1, -869, 0)"
+    },
+    {
+      "prueba": "Imágenes: todas cargan",
+      "resultado": "PASS",
+      "evidencia": "11 imágenes, rotas: []"
+    },
+    {
+      "prueba": "Imágenes: todas tienen atributo alt",
+      "resultado": "PASS",
+      "evidencia": "sin alt: []"
+    },
+    {
+      "prueba": "Consola sin errores ni warnings",
+      "resultado": "PASS",
+      "evidencia": {
+        "console": [],
+        "pageerror": []
+      }
+    },
+    {
+      "prueba": "Sin peticiones fallidas",
+      "resultado": "PASS",
+      "evidencia": "0 fallidas"
+    },
+    {
+      "prueba": "Rendimiento (orientativo, headless local)",
+      "resultado": "PASS",
+      "evidencia": {
+        "requests": 22,
+        "totalKB": 1109,
+        "jsKB": 626,
+        "imgKB": 315,
+        "domContentLoadedMs": 131,
+        "lcpMs_headless": 336
+      }
+    },
+    {
+      "prueba": "Metadatos SEO/OG/JSON-LD presentes y un único h1",
+      "resultado": "PASS",
+      "evidencia": {
+        "title": "Romeral Trailers · Muebles a medida en Medellín",
+        "lang": "es-CO",
+        "description": "Taller de diseño en Medellín. Fabricamos muebles a medida de estilo industrial y minimalista: comedores, salas y cocinas. Envíos nacionales.",
+        "canonical": "https://romeraltrailers.com/",
+        "ogTitle": "Romeral Trailers · Muebles a medida en Medellín",
+        "ogImage": "https://romeraltrailers.com/og.jpg",
+        "ogLocale": "es_CO",
+        "twitter": "summary_large_image",
+        "icon": "/icon.png?icon.34jzvtw0oe28a.png",
+        "apple": "/apple-icon.png?apple-icon.1vcvcxdnv3ia-.png",
+        "h1": 1,
+        "ldOk": true,
+        "ldType": "FurnitureStore",
+        "ldKeys": [
+          "@context",
+          "@type",
+          "name",
+          "description",
+          "url",
+          "image",
+          "logo",
+          "telephone",
+          "email",
+          "address",
+          "areaServed",
+          "sameAs"
+        ]
+      }
+    },
+    {
+      "prueba": "Archivo /robots.txt servido",
+      "resultado": "PASS",
+      "evidencia": "status 200"
+    },
+    {
+      "prueba": "Archivo /sitemap.xml servido",
+      "resultado": "PASS",
+      "evidencia": "status 200"
+    },
+    {
+      "prueba": "Archivo /og.jpg servido",
+      "resultado": "PASS",
+      "evidencia": "status 200"
+    },
+    {
+      "prueba": "Archivo /icon.png servido",
+      "resultado": "PASS",
+      "evidencia": "status 200"
+    },
+    {
+      "prueba": "Enlaces internos (anclas) apuntan a secciones existentes",
+      "resultado": "PASS",
+      "evidencia": "13 anclas, rotas: []"
+    },
+    {
+      "prueba": "Ningún enlace vacío o '#'",
+      "resultado": "PASS",
+      "evidencia": "vacíos: []"
+    },
+    {
+      "prueba": "Enlaces externos con target=_blank y rel=noopener",
+      "resultado": "PASS",
+      "evidencia": "16 externos, inseguros: []"
+    },
+    {
+      "prueba": "Todos los CTA de WhatsApp usan el número verificado",
+      "resultado": "PASS",
+      "evidencia": "12 enlaces WhatsApp, incorrectos: []"
+    },
+    {
+      "prueba": "Mensajes de WhatsApp prellenados con contexto",
+      "resultado": "PASS",
+      "evidencia": [
+        "Hola Romeral 👋 Quiero cotizar un mueble.",
+        "Hola Romeral 👋 Quiero cotizar un mueble a medida.",
+        "Hola Romeral 👋 Me interesa el Comedor Berlín. ¿Me ayudan con medidas y cotización?",
+        "Hola Romeral 👋 Me interesa el Comedor Bruxelles. ¿Me ayudan con medidas y cotización?"
+      ]
+    },
+    {
+      "prueba": "No se enlaza la tienda Shopify caída",
+      "resultado": "PASS",
+      "evidencia": "enlaces a Shopify: 0"
+    },
+    {
+      "prueba": "Formulario: vacío bloquea envío y muestra errores",
+      "resultado": "PASS",
+      "evidencia": "3 errores, window.open llamado 0 veces, foco en 'nombre'"
+    },
+    {
+      "prueba": "Formulario: datos válidos abren WhatsApp con el mensaje compuesto",
+      "resultado": "PASS",
+      "evidencia": {
+        "url": "https://wa.me/573132867686?text=Hola%20Romeral%20%F0%9F%91%8…",
+        "mensaje": "Hola Romeral 👋 \nSoy Ana Prueba, de Bogotá.\nQuiero cotizar: Comedor.\nMedidas aproximadas: 160 x 90 cm.\nPara 6 personas"
+      }
+    },
+    {
+      "prueba": "Formulario: no muestra falso 'enviado'",
+      "resultado": "PASS",
+      "evidencia": "Abrimos WhatsApp con tu mensaje listo. El mensaje aún no se ha enviado: confírmalo en WhatsApp. ¿No se abrió? Ábrelo aquí."
+    },
+    {
+      "prueba": "Teclado: skip link es el primer foco y lleva al contenido",
+      "resultado": "PASS",
+      "evidencia": "primer foco 'Saltar al contenido', luego #contenido"
+    },
+    {
+      "prueba": "Teclado: foco visible en botones",
+      "resultado": "PASS",
+      "evidencia": "solid 2px rgb(201, 149, 107)"
+    },
+    {
+      "prueba": "Menú móvil: abre, Esc cierra y el foco vuelve al botón",
+      "resultado": "PASS",
+      "evidencia": "visible=True, aria-expanded=true, cerrado=True, foco=menu-movil"
+    },
+    {
+      "prueba": "Menú móvil: enlace navega y cierra el menú",
+      "resultado": "PASS",
+      "evidencia": "scrollY=7080"
+    },
+    {
+      "prueba": "Móvil: proyectos sin pin, carrusel avanza con botón",
+      "resultado": "PASS",
+      "evidencia": "pin=False, scrollLeft 0→328, contador '02 / 03'"
+    },
+    {
+      "prueba": "Móvil: barra fija de WhatsApp visible fuera del hero",
+      "resultado": "PASS",
+      "evidencia": "none"
+    },
+    {
+      "prueba": "Móvil: sin errores de JS",
+      "resultado": "PASS",
+      "evidencia": "0"
+    },
+    {
+      "prueba": "Movimiento reducido: todo visible, sin pin ni máscaras",
+      "resultado": "PASS",
+      "evidencia": {
+        "hidden": 0,
+        "pinned": false,
+        "masks": 0
+      }
+    },
+    {
+      "prueba": "Responsive: sin desbordamiento horizontal en 6 viewports",
+      "resultado": "PASS",
+      "evidencia": {
+        "movil-pequeno": {
+          "px": 0,
+          "elementos": [],
+          "fuente_min_parrafos_px": 13,
+          "botones_<44px": 0
+        },
+        "movil-grande": {
+          "px": 0,
+          "elementos": [],
+          "fuente_min_parrafos_px": 13,
+          "botones_<44px": 0
+        },
+        "movil-horizontal": {
+          "px": 0,
+          "elementos": [],
+          "fuente_min_parrafos_px": 13,
+          "botones_<44px": 0
+        },
+        "tableta": {
+          "px": 0,
+          "elementos": [],
+          "fuente_min_parrafos_px": 13,
+          "botones_<44px": 0
+        },
+        "portatil": {
+          "px": 0,
+          "elementos": [],
+          "fuente_min_parrafos_px": 13,
+          "botones_<44px": 0
+        },
+        "escritorio": {
+          "px": 0,
+          "elementos": [],
+          "fuente_min_parrafos_px": 13,
+          "botones_<44px": 0
+        }
+      }
+    },
+    {
+      "prueba": "Responsive: botones con objetivo táctil ≥ 44px",
+      "resultado": "PASS",
+      "evidencia": {
+        "movil-pequeno": 0,
+        "movil-grande": 0,
+        "movil-horizontal": 0,
+        "tableta": 0,
+        "portatil": 0,
+        "escritorio": 0
+      }
+    },
+    {
+      "prueba": "Accesibilidad (axe-core 4.14): 0 violaciones serias/críticas (estado final)",
+      "resultado": "PASS",
+      "evidencia": {
+        "movil-grande": [],
+        "escritorio": []
+      }
+    },
+    {
+      "prueba": "Accesibilidad axe en estado inicial (informativo)",
+      "resultado": "INFO",
+      "evidencia": {
+        "movil-grande": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "n": 32,
+            "target": [
+              ".inline[data-word=\"true\"]:nth-child(1)",
+              ".inline[data-word=\"true\"]:nth-child(2)",
+              ".inline[data-word=\"true\"]:nth-child(3)"
+            ]
+          }
+        ],
+        "escritorio": [
+          {
+            "id": "color-contrast",
+            "impact": "serious",
+            "n": 32,
+            "target": [
+              ".inline[data-word=\"true\"]:nth-child(1)",
+              ".inline[data-word=\"true\"]:nth-child(2)",
+              ".inline[data-word=\"true\"]:nth-child(3)"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

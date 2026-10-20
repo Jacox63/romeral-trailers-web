@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+/* ───────────────────────── Tokens (ver docs/design-system.md) ───────────────────────── */
+@theme {
+  --color-night: #1c1719;
+  --color-charcoal: #2d272b;
+  --color-bone: #f1ece4;
+  --color-sand: #e4dacd;
+  --color-greige: #b0a497;
+  --color-wood: #c9956b;
+  --color-wood-deep: #7a4a2e;
+  --color-wood-raw: #a97d59;
+  --color-muted: #5e5650;
+  --color-muted-dark: #b8ada2;
+
+  --font-sans: "Jost Variable", "Jost", ui-sans-serif, system-ui, sans-serif;
+  --font-accent: "Cormorant Garamond", ui-serif, Georgia, serif;
+
+  --text-display: clamp(2.75rem, 6vw, 6.5rem);
+  --text-display--line-height: 0.95;
+  --text-display--letter-spacing: -0.02em;
+  --text-h2: clamp(2.1rem, 4.6vw, 4.25rem);
+  --text-h2--line-height: 1.02;
+  --text-h2--letter-spacing: -0.015em;
+  --text-h3: clamp(1.35rem, 2vw, 1.75rem);
+  --text-h3--line-height: 1.2;
+  --text-lead: clamp(1.125rem, 1.5vw, 1.375rem);
+  --text-lead--line-height: 1.55;
+
+  --radius-piece: 2px;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root {
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --space-section: clamp(5rem, 12vw, 10rem);
+  --header-h: 4.5rem;
+  color-scheme: light;
+}
+
+/* ───────────────────────── Base ───────────────────────── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-h);
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-bone);
+    color: var(--color-night);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: clip;
+  }
+  h1, h2, h3 {
+    font-weight: 300;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  img { max-width: 100%; height: auto; }
+  ::selection { background: var(--color-wood); color: var(--color-night); }
+
+  :focus-visible {
+    outline: 2px solid var(--color-wood);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .on-light :focus-visible { outline-color: var(--color-wood-deep); }
+}
+
+/* ───────────────────────── Utilidades de marca ───────────────────────── */
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 1440px;
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+  .section-y { padding-block: var(--space-section); }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.6;
+  }
+
+  .accent {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .wordmark {
+    font-weight: 300;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+  }
+
+  /* Botón con barrido de fondo */
+  .btn {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    min-height: 3.25rem;
+    padding: 0.85rem 1.6rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border-radius: var(--radius-piece);
+    transition: color 0.35s var(--ease-out-expo), border-color 0.35s, transform 0.2s;
+  }
+  .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.45s var(--ease-out-expo);
+  }
+  .btn:hover::before { transform: scaleX(1); transform-origin: left; }
+  .btn:active { transform: scale(0.98); }
+  .btn .btn-arrow { transition: transform 0.35s var(--ease-out-expo); }
+  .btn:hover .btn-arrow { transform: translateX(4px); }
+
+  .btn-primary { background: var(--color-wood); color: var(--color-night); }
+  .btn-primary::before { background: var(--color-bone); }
+  .btn-ghost { border: 1px solid color-mix(in srgb, var(--color-bone) 45%, transparent); color: var(--color-bone); }
+  .btn-ghost::before { background: var(--color-bone); }
+  .btn-ghost:hover { color: var(--color-night); border-color: var(--color-bone); }
+  .btn-dark { background: var(--color-night); color: var(--color-bone); }
+  .btn-dark::before { background: var(--color-wood-deep); }
+
+  /* Enlace con subrayado que crece */
+  .link-line {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s var(--ease-out-expo);
+    padding-bottom: 2px;
+  }
+  .link-line:hover, .link-line:focus-visible { background-size: 100% 1px; }
+
+  .piece-frame {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-piece);
+    background: var(--color-charcoal);
+  }
+  .piece-frame img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Grano sutil sobre secciones oscuras (CSS puro, sin imagen) */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.6) 0.5px, transparent 0.6px);
+    background-size: 3px 3px;
+    mix-blend-mode: overlay;
+  }
+
+  /* FAQ */
+  .faq-item summary { list-style: none; cursor: pointer; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item .faq-icon { transition: transform 0.3s var(--ease-out-expo); }
+  .faq-item[open] .faq-icon { transform: rotate(45deg); }
+  .faq-item[open] .faq-body { animation: faq-in 0.45s var(--ease-out-expo); }
+  @keyframes faq-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+
+  /* Carrusel nativo (móvil/tableta) */
+  .snap-track { scroll-snap-type: x mandatory; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .snap-track::-webkit-scrollbar { display: none; }
+  .snap-track > * { scroll-snap-align: start; }
+
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    background: var(--color-wood);
+    color: var(--color-night);
+    font-weight: 500;
+  }
+  .skip-link:focus { top: 1rem; }
+}
+
+/* ───────────────────────── Movimiento reducido ───────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

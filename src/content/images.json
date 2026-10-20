@@ -1,0 +1,52 @@
+{
+  "01-comedor-sake": {
+    "src": "/images/brand/01-comedor-sake.webp",
+    "width": 617,
+    "height": 621
+  },
+  "02-cocina-laura": {
+    "src": "/images/brand/02-cocina-laura.webp",
+    "width": 494,
+    "height": 617
+  },
+  "03-salon-social": {
+    "src": "/images/brand/03-salon-social.webp",
+    "width": 619,
+    "height": 617
+  },
+  "04-comedor-berlin": {
+    "src": "/images/brand/04-comedor-berlin.webp",
+    "width": 463,
+    "height": 617
+  },
+  "05-comedor-banca": {
+    "src": "/images/brand/05-comedor-banca.webp",
+    "width": 348,
+    "height": 617
+  },
+  "06-comedor-bruxelles": {
+    "src": "/images/brand/06-comedor-bruxelles.webp",
+    "width": 463,
+    "height": 617
+  },
+  "07-habitacion-reel": {
+    "src": "/images/brand/07-habitacion-reel.webp",
+    "width": 348,
+    "height": 616
+  },
+  "08-airbnb-santa-marta": {
+    "src": "/images/brand/08-airbnb-santa-marta.webp",
+    "width": 619,
+    "height": 617
+  },
+  "09-cocina-a-medida": {
+    "src": "/images/brand/09-cocina-a-medida.webp",
+    "width": 348,
+    "height": 617
+  },
+  "10-estudio-viralbymafe": {
+    "src": "/images/brand/10-estudio-viralbymafe.webp",
+    "width": 348,
+    "height": 617
+  }
+}
