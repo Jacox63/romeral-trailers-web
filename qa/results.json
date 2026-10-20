@@ -1,10 +1,10 @@
 {
-  "fecha": "2026-10-20 16:49",
+  "fecha": "2026-10-20 17:00",
   "resultados": [
     {
       "prueba": "Carga inicial (HTTP 200)",
       "resultado": "PASS",
-      "evidencia": "status 200, load 0.21s"
+      "evidencia": "status 200, load 0.24s"
     },
     {
       "prueba": "Proyectos: sección fijada (pin) en escritorio",
@@ -64,7 +64,7 @@
         "jsKB": 626,
         "imgKB": 315,
         "domContentLoadedMs": 32,
-        "lcpMs_headless": 224
+        "lcpMs_headless": 232
       }
     },
     {

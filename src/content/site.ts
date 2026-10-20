@@ -6,7 +6,9 @@
 import images from "./images.json";
 
 export type BrandImage = { src: string; width: number; height: number };
-const img = (k: keyof typeof images): BrandImage => images[k];
+/** Prefijo de subruta (GitHub Pages). next/image no lo añade solo a `src`. */
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+const img = (k: keyof typeof images): BrandImage => ({ ...images[k], src: `${BASE}${images[k].src}` });
 
 export const site = {
   name: "Romeral Trailers",
