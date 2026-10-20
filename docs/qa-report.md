@@ -44,7 +44,7 @@
 | Móvil | Proyectos sin pin; carrusel avanza con botón | PASS | scrollLeft 0→328, contador 02/03 |
 | Móvil | Barra fija de WhatsApp fuera del hero | PASS | — |
 | Móvil | Sin errores JS | PASS | — |
-| Responsive | 0 px de desbordamiento horizontal en 320, 414, 844×390, 768, 1280, 1600 | PASS | capturas `responsive-*.png` |
+| Responsive | 0 px de desbordamiento horizontal en 320, 414, 844×390, 768, 1280, 1600 | PASS | capturas `responsive-*.jpg` |
 | Responsive | 0 botones con objetivo táctil < 44 px | PASS | — |
 | Accesibilidad | axe-core 4.14: 0 violaciones serias/críticas (estado final) | PASS | móvil y escritorio |
 
